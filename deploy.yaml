@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-api
+  labels:
+    Flask: Api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      Flask: Api
+  template:
+    metadata:
+      name: flask-template
+      labels:
+        Flask: Api
+    spec:
+      containers:
+        - name: flask
+          image: flaskapi:v1.0.0
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: db-url
+                  key: DB_URL
+            - name: FLASK_APP
+              value: "app:app"

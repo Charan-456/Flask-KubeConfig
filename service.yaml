@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodeport-service-flask
+spec:
+  type: NodePort
+  selector:
+    Flask: Api
+  ports:
+    - port: 8000
+      targetPort: 8000
+      nodePort: 31007
