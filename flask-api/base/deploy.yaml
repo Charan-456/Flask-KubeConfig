@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: flask
-          image: flaskapi:v1.0.0
+          image: 977099016333.dkr.ecr.us-east-1.amazonaws.com/flaskapi:c042e391741a76dfc42d41e1be2cdf0c404df579
           ports:
             - containerPort: 8000
           env:
