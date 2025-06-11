@@ -17,7 +17,12 @@ spec:
     spec:
       containers:
         - name: flask
-          image: flaskapi:v1.0.0
+<<<<<<< HEAD
+          imagePullSecrets: 
+            - name: ecr-cred
+=======
+          image: 977099016333.dkr.ecr.us-east-1.amazonaws.com/flaskapi:c042e391741a76dfc42d41e1be2cdf0c404df579
+>>>>>>> f23d49528b0516753b70d8ea6ead238e632b454c
           ports:
             - containerPort: 8000
           env:
