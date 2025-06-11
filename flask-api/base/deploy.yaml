@@ -17,6 +17,8 @@ spec:
     spec:
       containers:
         - name: flask
+          imagePullSecrets: 
+            - name: ecr-cred
           image: flaskapi:v1.0.0
           ports:
             - containerPort: 8000
