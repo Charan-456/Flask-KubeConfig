@@ -15,10 +15,10 @@ spec:
       labels:
         Flask: Api
     spec:
+      imagePullSecrets: 
+        - name: ecr-cred
       containers:
         - name: flask
-          imagePullSecrets: 
-            - name: ecr-cred
           image: 977099016333.dkr.ecr.us-east-1.amazonaws.com/flaskapi:8079e1f442a67cf12ff4b416742ac3cfa2062d17
           ports:
             - containerPort: 8000
