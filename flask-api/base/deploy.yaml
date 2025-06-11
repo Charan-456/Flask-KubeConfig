@@ -19,7 +19,7 @@ spec:
         - name: ecr-cred
       containers:
         - name: flask
-          image: 977099016333.dkr.ecr.us-east-1.amazonaws.com/flaskapi:8079e1f442a67cf12ff4b416742ac3cfa2062d17
+          image: 977099016333.dkr.ecr.us-east-1.amazonaws.com/flaskapi:1439b104c5ec44518dab0b03936ac87c41ff4ee9
           ports:
             - containerPort: 8000
           env:
